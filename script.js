@@ -2,7 +2,7 @@ const forecast =document.getElementById('forecast');
 
 catchWeather();
 async function catchWeather(){
- const response = await fetch('http://dataservice.accuweather.com/currentconditions/v1/204409?apikey=940MbBDIpwx2RAcAzooCDywK48UHSv4W')
+ const response = await fetch('https://dataservice.accuweather.com/currentconditions/v1/204409?apikey=940MbBDIpwx2RAcAzooCDywK48UHSv4W')
  const data = await response.json();
  const {WeatherText,Temperature} = data[0];
  document.getElementById('weathCond').textContent =WeatherText;
@@ -23,7 +23,7 @@ async function catchWeather(){
  
  catchForeCast();
 async function catchForeCast(){
- const response = await fetch('http://dataservice.accuweather.com/forecasts/v1/daily/5day/204409?apikey=940MbBDIpwx2RAcAzooCDywK48UHSv4W')
+ const response = await fetch('https://dataservice.accuweather.com/forecasts/v1/daily/5day/204409?apikey=940MbBDIpwx2RAcAzooCDywK48UHSv4W')
  const data = await response.json();
 //  console.log(data.DailyForecasts);
  const D1 = document.getElementById('D1')
